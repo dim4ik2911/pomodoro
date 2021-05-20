@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pomodoro app by Dmitrijs Paklons</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <section>
+        <div class="mode-buttons" id="mode-buttons">
+          <button class="button" data-mode="pomodoro">Pomodoro</button>
+          <button class="button" data-mode="shortBreak">Short break</button>
+          <button class="button" data-mode="longBreak">Long break</button>
+        </div>
+        <div class="clock">
+          <span id="time-minutes">25</span>
+          <span class="separator">:</span>
+          <span id="time-seconds">00</span>
+        </div>
+        <div class="main-button">
+          <button class="button">Start</button>
+        </div>
+      </section>
+    </main>
+    <script src="./main.js"></script>
+  </body>
+</html>
