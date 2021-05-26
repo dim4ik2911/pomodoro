@@ -6,26 +6,10 @@
 html {
   font-size: 62.5%;
   color: #fff;
-  font-family: "Pattaya", sans-serif;
+  // font-family: "Pattaya", sans-serif;
+  font-family: "Space Mono", monospace;
 }
 
-:root {
-  --pomodoro: radial-gradient(
-    ellipse farthest-corner at center center,
-    #e07777 0%,
-    #924eff 80%
-  );
-  --shortBreak: radial-gradient(
-    ellipse farthest-corner at center center,
-    #b2e077 0%,
-    #4e9fff 80%
-  );
-  --longBreak: radial-gradient(
-    ellipse farthest-corner at center center,
-    #dee077 0%,
-    #ff784e 80%
-  );
-}
 main {
   background: radial-gradient(
     ellipse farthest-corner at center center,
@@ -41,26 +25,29 @@ main {
 section {
   height: 60rem;
   width: 60rem;
-  box-shadow: 0 0 8rem -2.5rem rgba(146, 78, 255, 0.95);
+  // box-shadow: 0 0 8rem -2.5rem rgba(146, 78, 255, 0.95);
+  box-shadow: 0px 0px 3.8rem 0.6rem rgba(146, 78, 255, 0.75);
   border-radius: 3rem;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
 
+  position: relative;
+
   .mode-buttons {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    width: 100%;
+    width: 90%;
 
     .button {
       text-decoration: none;
       border: none;
       background: inherit;
-      font-family: "Pattaya", sans-serif;
+      font-family: "Space Mono", monospace;
       color: #fff;
-      font-size: 2rem;
+      font-size: 3rem;
 
       display: flex;
       justify-content: space-around;
@@ -69,10 +56,9 @@ section {
   }
   .clock {
     text-decoration: none;
-
-    span {
-      font-size: 15rem;
-    }
+    font-size: 15rem;
+    width: 90%;
+    text-align: center;
   }
   .main-button {
     text-decoration: none;
@@ -81,13 +67,21 @@ section {
       text-decoration: none;
       border: none;
       background: inherit;
-      font-family: "Pattaya", sans-serif;
+      font-family: "Space Mono", monospace;
       color: #fff;
-      font-size: 3rem;
+      font-size: 5rem;
 
       display: flex;
       justify-content: space-around;
       align-items: center;
     }
+  }
+
+  img {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+    height: 4.5rem;
+    width: 4.5rem;
   }
 }
