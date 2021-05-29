@@ -1,3 +1,5 @@
+//320 568
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +8,6 @@
 html {
   font-size: 62.5%;
   color: #fff;
-  // font-family: "Pattaya", sans-serif;
   font-family: "Space Mono", monospace;
 }
 
@@ -23,8 +24,9 @@ main {
 }
 
 section {
-  height: 60rem;
-  width: 60rem;
+  height: 30rem;
+  width: 30rem;
+  // background-color: yellowgreen;
   // box-shadow: 0 0 8rem -2.5rem rgba(146, 78, 255, 0.95);
   box-shadow: 0px 0px 3.8rem 0.6rem rgba(146, 78, 255, 0.75);
   border-radius: 3rem;
@@ -47,7 +49,7 @@ section {
       background: inherit;
       font-family: "Space Mono", monospace;
       color: #fff;
-      font-size: 3rem;
+      font-size: 2rem;
 
       display: flex;
       justify-content: space-around;
@@ -56,7 +58,7 @@ section {
   }
   .clock {
     text-decoration: none;
-    font-size: 15rem;
+    font-size: 8.5rem;
     width: 90%;
     text-align: center;
   }
@@ -69,7 +71,7 @@ section {
       background: inherit;
       font-family: "Space Mono", monospace;
       color: #fff;
-      font-size: 5rem;
+      font-size: 3rem;
 
       display: flex;
       justify-content: space-around;
@@ -81,7 +83,28 @@ section {
     position: absolute;
     right: 1rem;
     bottom: 1rem;
-    height: 4.5rem;
-    width: 4.5rem;
+    height: 3rem;
+    width: 3rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  html {
+    font-size: 81.25%;
+  }
+}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 93.75%;
+  }
+}
+@media screen and (min-width: 800px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 125%;
   }
 }

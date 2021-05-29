@@ -3,7 +3,7 @@ const breakButton = document.getElementById("break");
 const startButton = document.getElementById("start");
 const time = document.getElementById("timer");
 
-time.innerHTML = `00 10`;
+time.innerHTML = `25 00`;
 
 function startTimer() {
   let presentTime = time.innerHTML;
@@ -11,6 +11,7 @@ function startTimer() {
   let m = parseInt(timeArray[0]);
   let s = checkSeconds(parseInt(timeArray[1] - 1));
   if (presentTime == `00 00`) {
+    startButton.innerHTML = `Well Done!`;
     return;
   }
   if (s == 59) {
@@ -32,59 +33,36 @@ function checkSeconds(sec) {
   return sec;
 }
 
-// startButton.addEventListener("click", () => {
-//   let timingInterval = setInterval(startTimer, 1000);
-//   timingInterval;
-//   // startButton.disabled = true;
-//   // timeClicked++;
-//   // if (timeClicked % 2 !== 0) {
-//   //   console.log(timeClicked);
-//   //   timingInterval;
-//   //   startButton.innerHTML = `Stop`;
-//   // }
-//   // if (timeClicked % 2 == 0) {
-//   //   console.log(timeClicked);
-//   //   clearInterval(timingInterval);
-//   //   startButton.innerHTML = `Start`;
-//   // }
-
-//   breakButton.addEventListener("click", () => {
-//     time.innerHTML = `00 05`;
-//     clearInterval(timingInterval);
-//     // startButton.disabled = false;
-//   });
-
-//   pomodoroButton.addEventListener("click", () => {
-//     time.innerHTML = `00 10`;
-//     clearInterval(timingInterval);
-//     // startButton.disabled = false;
-//   });
-// });
-
-breakButton.addEventListener("click", () => {
-  time.innerHTML = `00 05`;
-  clearInterval(startTimer);
-});
-
-pomodoroButton.addEventListener("click", () => {
-  time.innerHTML = `00 10`;
-  clearInterval(startTimer);
-});
-
-//timer
-
-const timerButton = () => {
+startButton.addEventListener("click", () => {
   if (startButton.innerHTML == `Start`) {
     timingInterval = setInterval(startTimer, 1000);
-    startButton.innerHTML = `Stop`;
+    startButton.innerHTML = `Pause`;
   } else {
     clearInterval(timingInterval);
     startButton.innerHTML = `Start`;
   }
-};
 
-startButton.addEventListener("click", () => {
-  timerButton();
+  breakButton.addEventListener("click", () => {
+    time.innerHTML = `05 00`;
+    clearInterval(timingInterval);
+    startButton.innerHTML = `Start`;
+  });
+
+  pomodoroButton.addEventListener("click", () => {
+    time.innerHTML = `25 00`;
+    clearInterval(timingInterval);
+    startButton.innerHTML = `Start`;
+  });
+});
+
+breakButton.addEventListener("click", () => {
+  time.innerHTML = `05 00`;
+  clearInterval(startTimer);
+});
+
+pomodoroButton.addEventListener("click", () => {
+  time.innerHTML = `25 00`;
+  clearInterval(startTimer);
 });
 
 //audio
