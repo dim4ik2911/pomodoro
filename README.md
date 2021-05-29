@@ -1,1 +1,1 @@
-<h1 text-align="center">Pomodoro Timer</h1>
+<h1 align="center">Pomodoro Timer</h1>
