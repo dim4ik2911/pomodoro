@@ -32,35 +32,34 @@ function checkSeconds(sec) {
   return sec;
 }
 
-let timeClicked = 2;
-startButton.addEventListener("click", () => {
-  let timingInterval = setInterval(startTimer, 1000);
-  timingInterval;
-  startButton.disabled = true;
-  // timeClicked++;
-  // if (timeClicked % 2 !== 0) {
-  //   console.log(timeClicked);
-  //   timingInterval;
-  //   startButton.innerHTML = `Stop`;
-  // }
-  // if (timeClicked % 2 == 0) {
-  //   console.log(timeClicked);
-  //   clearInterval(timingInterval);
-  //   startButton.innerHTML = `Start`;
-  // }
+// startButton.addEventListener("click", () => {
+//   let timingInterval = setInterval(startTimer, 1000);
+//   timingInterval;
+//   // startButton.disabled = true;
+//   // timeClicked++;
+//   // if (timeClicked % 2 !== 0) {
+//   //   console.log(timeClicked);
+//   //   timingInterval;
+//   //   startButton.innerHTML = `Stop`;
+//   // }
+//   // if (timeClicked % 2 == 0) {
+//   //   console.log(timeClicked);
+//   //   clearInterval(timingInterval);
+//   //   startButton.innerHTML = `Start`;
+//   // }
 
-  breakButton.addEventListener("click", () => {
-    time.innerHTML = `00 05`;
-    clearInterval(timingInterval);
-    startButton.disabled = false;
-  });
+//   breakButton.addEventListener("click", () => {
+//     time.innerHTML = `00 05`;
+//     clearInterval(timingInterval);
+//     // startButton.disabled = false;
+//   });
 
-  pomodoroButton.addEventListener("click", () => {
-    time.innerHTML = `00 10`;
-    clearInterval(timingInterval);
-    startButton.disabled = false;
-  });
-});
+//   pomodoroButton.addEventListener("click", () => {
+//     time.innerHTML = `00 10`;
+//     clearInterval(timingInterval);
+//     // startButton.disabled = false;
+//   });
+// });
 
 breakButton.addEventListener("click", () => {
   time.innerHTML = `00 05`;
@@ -70,6 +69,22 @@ breakButton.addEventListener("click", () => {
 pomodoroButton.addEventListener("click", () => {
   time.innerHTML = `00 10`;
   clearInterval(startTimer);
+});
+
+//timer
+
+const timerButton = () => {
+  if (startButton.innerHTML == `Start`) {
+    timingInterval = setInterval(startTimer, 1000);
+    startButton.innerHTML = `Stop`;
+  } else {
+    clearInterval(timingInterval);
+    startButton.innerHTML = `Start`;
+  }
+};
+
+startButton.addEventListener("click", () => {
+  timerButton();
 });
 
 //audio
