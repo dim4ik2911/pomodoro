@@ -7,12 +7,9 @@
 
 <h3 align="center">Next 3 features to add</h3>
 
-<ul align="center">
-  <h6 align="center">the progress bar on top of center square</h6>
-   <h6 align="center">the bell for finishing the session</h6>
-   <h6 align="center">timer flicked when 00:00</h6>
-</ul>
-
+<h6 align="center">the progress bar on top of center square</h6>
+<h6 align="center">the bell for finishing the session</h6>
+<h6 align="center">timer flicked when 00:00</h6>
 
 
 
