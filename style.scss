@@ -1,5 +1,5 @@
-//320 568
-
+//320 568 mobile first approach
+//basic set-up
 * {
   margin: 0;
   padding: 0;
@@ -22,7 +22,7 @@ main {
   justify-content: center;
   align-items: center;
 }
-
+//central square in the center where all the action is
 section {
   height: 30rem;
   width: 30rem;
@@ -88,7 +88,7 @@ section {
     width: 3rem;
   }
 }
-
+//responsiveness
 @media screen and (min-width: 600px) {
   html {
     font-size: 81.25%;

@@ -1,10 +1,12 @@
+//declared main variables
 const pomodoroButton = document.getElementById("pomodoro");
 const breakButton = document.getElementById("break");
 const startButton = document.getElementById("start");
 const time = document.getElementById("timer");
-
+//default time
 time.innerHTML = `25 00`;
 
+//timer function
 function startTimer() {
   let presentTime = time.innerHTML;
   let timeArray = presentTime.split(" ");
@@ -33,6 +35,7 @@ function checkSeconds(sec) {
   return sec;
 }
 
+//pressing the buttons
 startButton.addEventListener("click", () => {
   if (startButton.innerHTML == `Start`) {
     timingInterval = setInterval(startTimer, 1000);
