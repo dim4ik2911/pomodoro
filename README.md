@@ -13,5 +13,8 @@
 <h4 align="center">timer flicked when 00:00</h4>
 
 
+<div align="center">
+<img align="center" src="https://user-images.githubusercontent.com/75121895/123848288-77a57100-d90f-11eb-89ab-4491b19ec19e.png" alt="pomodoro">
+</div>
 
 
